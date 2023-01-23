@@ -18,7 +18,7 @@ public class Error implements ErrorController {
         if (status != null) {
             int statusCode = Integer.valueOf(status.toString());
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
-                return ERROR_TEMPLATES_PATH + "404";
+                return "redirect:/main/main";
             }
 
             if (statusCode == HttpStatus.FORBIDDEN.value()) {
