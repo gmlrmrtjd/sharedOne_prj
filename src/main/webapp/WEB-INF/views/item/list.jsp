@@ -242,7 +242,7 @@
             <div class="searchBox">
                 <c:url value="/item/list" var="listLink"></c:url>
 
-                <%--            검색박스 예정--%>
+                <%--            검색박스 추후 사용예정--%>
 
                 <%--      <form action="${listLink}" role="search">--%>
                 <%--                        <div style="display: flex;justify-content: space-between;">--%>
@@ -455,21 +455,6 @@
     </div>
 </div>
 </body>
-<script>
-    // function widthResize() {
-    //     var windowWidth = $(window).width();
-    //
-    //     console.log(windowWidth)
-    //
-    //     if(windowWidth < 1200) {
-    //
-    //     }
-    // }
-    // widthResize()
-    // $(window).resize(function(){
-    //     widthResize()
-    // })
-</script>
 
 <script>
     // 제품그룹 select

@@ -29,16 +29,14 @@ public class ItemController {
             model.addAttribute("getItem", selectItem);
         }
         List<String> groupList = itemService.selectGroup();
-//        List<String> manufacturerList = itemService.selectManufacturer();
 
         model.addAttribute("groupList", groupList);
     }
 
     @PostMapping("selectManufacturer")
     @ResponseBody
-    public List<String> selectManufacturer (@RequestBody Map<String, Object> item_group
-            )
-    {
+    public List<String> selectManufacturer(@RequestBody Map<String, Object> item_group
+    ) {
         String m_item_group = (String) item_group.get("m_item_group");
 
         List<String> manufacturerList = itemService.selectManufacturer(m_item_group);
@@ -63,16 +61,16 @@ public class ItemController {
 
     @PostMapping("registerList")
     @ResponseBody
-    public Map<String, Object> registerList (@RequestBody List<Object> dataList) throws Exception {
+    public Map<String, Object> registerList(@RequestBody List<Object> dataList) throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();
         ObjectMapper mapper = new ObjectMapper();
         int cnt = 0;
         for (int i = 0; i < dataList.size(); i++) {
-            ItemDto itemDto = mapper.convertValue(dataList.get(i),ItemDto.class);
+            ItemDto itemDto = mapper.convertValue(dataList.get(i), ItemDto.class);
             itemService.register(itemDto);
             cnt += 1;
         }
-            map.put("cnt", cnt);
+        map.put("cnt", cnt);
         return map;
     }
 
@@ -86,17 +84,12 @@ public class ItemController {
                      ItemDto itemDto
     ) {
         List<ItemDto> list = itemService.itemList(page, type, keyword, itemDto);
-//        List<String> groupList = itemService.selectGroup();
-//        List<String> manufacturerList = itemService.selectManufacturer();
-
 
         model.addAttribute("itemList", list);
-//        model.addAttribute("groupList", groupList);
-//        model.addAttribute("manufacturerList", manufacturerList);
     }
 
     @PostMapping("remove")
-    public String remove(@RequestParam Map<String,String> removeIdList,
+    public String remove(@RequestParam Map<String, String> removeIdList,
                          RedirectAttributes rttr) {
         String[] removeList = removeIdList.get("m_item_id").split(",");
 
@@ -107,9 +100,8 @@ public class ItemController {
         }
 
         if (cnt >= 1) {
-            rttr.addFlashAttribute("message", cnt +"개의 제품이 제거되었습니다.");
-        }
-        else {
+            rttr.addFlashAttribute("message", cnt + "개의 제품이 제거되었습니다.");
+        } else {
             rttr.addFlashAttribute("message", "제품 제거를 실패하였습니다.");
         }
         return "redirect:/item/list";
