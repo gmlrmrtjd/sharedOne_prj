@@ -1,6 +1,6 @@
 # SharedOne_prj
 
-[프로젝트 소개.pdf](https://github.com/gmlrmrtjd/sharedOne_prj/files/10830566/default.pdf)
+[프로젝트 소개.pdf](https://gmlrmrtjd.github.io/sharedOne_prj/portfolio.pdf)
 
 ------------------
 ### 참여인원
