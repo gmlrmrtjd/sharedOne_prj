@@ -1,6 +1,5 @@
 # SharedOne_prj
 
-<!-- [프로젝트 포트폴리오 열기](https://gmlrmrtjd.github.io/sharedOne_prj/portfolio.pdf) -->
 
 ------------------
 ### 참여인원
@@ -35,6 +34,8 @@
  
  
  ------------------
+[프로젝트 포트폴리오](https://gmlrmrtjd.github.io/sharedOne_prj/portfolio.pdf)
+
  ![슬라이드1](https://user-images.githubusercontent.com/57023597/221348461-f24657a8-9e73-40b4-8ab7-cb9727eb9d52.png)
 ![슬라이드2](https://user-images.githubusercontent.com/57023597/221348478-cb4442d7-f3b9-4605-9685-eae256842961.png)
 ![슬라이드3](https://user-images.githubusercontent.com/57023597/221348481-c5dc18b3-0fcb-45da-8b3c-328c66a00478.png)
